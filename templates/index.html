@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask App - Cajas de Texto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prueba con Flask</h1>
+        <img src="{{ url_for('static', filename='Flask_logo.svg') }}" alt="Imagen Decorativa">
+        <form method="post">
+            <div class="caja-texto">
+                <textarea name="texto1" placeholder="Caja de texto 1">{{ texto1 }}</textarea>
+            </div>
+            <div class="caja-texto">
+                <textarea name="texto2" placeholder="Caja de texto 2">{{ texto2 }}</textarea>
+            </div>
+            <div class="botones">
+                <button type="submit" name="borrar">Borrar</button>
+                <button type="submit" name="swap">Swap</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
